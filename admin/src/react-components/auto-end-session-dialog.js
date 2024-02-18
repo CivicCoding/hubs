@@ -75,14 +75,14 @@ export const AutoEndSessionDialog = withStyles(styles)(
           <DialogContent>
             <Typography className={classes.endSessionMessage}>
               {!this.state.sessionEnded
-                ? `Auto-ending session in ${this.state.secondsRemaining} seconds.`
-                : "Your session has ended reload to start a new one."}
+                ? `会话在 ${this.state.secondsRemaining} 秒后自动结束.`
+                : "您的会话已结束重新加载以开始新的会话"}
             </Typography>
           </DialogContent>
           {!this.state.sessionEnded ? (
-            <Button onClick={this.onCancel}>Cancel</Button>
+            <Button onClick={this.onCancel}>取消</Button>
           ) : (
-            <Button onClick={() => location.reload()}>Reload</Button>
+            <Button onClick={() => location.reload()}>重新加载</Button>
           )}
         </Dialog>
       );
